@@ -6,6 +6,8 @@ public class Person {
 	private String name;
 	private int taxId;
 	
+	private Address address;
+	
 	public Person() {
 		
 	}
@@ -27,10 +29,15 @@ public class Person {
 		this.taxId = taxId;
 	}
 
+	public void setAddress(Address adress) {
+		this.address = adress;
+	}
+
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", taxId=" + taxId + "]";
+		return "Person [id=" + id + ", name=" + name + ", taxId=" + taxId + ", adress=" + address + "]";
 	}
+
 
 	
 	

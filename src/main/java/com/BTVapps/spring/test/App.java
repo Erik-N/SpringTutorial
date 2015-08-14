@@ -10,11 +10,12 @@ public class App {
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/BTVapps/spring/test/beans/beans.xml");
 		
 		
-		Person person = (Person) context.getBean("person");
-		person.speak();
+		Person person1 = (Person) context.getBean("person");
+		Person person2 = (Person) context.getBean("person");
 		Address address = (Address) context.getBean("address");
 		
-		System.out.println(person.toString());
+		person1.setTaxId(666);
+		System.out.println(person2);
 		
 		// close the applicaton context
 		((ClassPathXmlApplicationContext) context).close();
@@ -22,3 +23,4 @@ public class App {
 	}
 
 }
+ 

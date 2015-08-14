@@ -3,7 +3,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="person" class="com.BTVapps.spring.test.Person">
+	<bean id="person" class="com.BTVapps.spring.test.Person"
+		scope="prototype">
 		<constructor-arg value="777" index="0" name="id" type="int"></constructor-arg>
 		<constructor-arg value="Bob" index="1" name="name"
 			type="String">

@@ -17,14 +17,23 @@ public class Person {
 		this.name = name;
 	}
 
+	public static Person getInstance(int id, String name) {
+		System.out.println("Creating person using factory method");
+		return new Person(id, name);
+	}
 
 
 	public void speak() {
 		System.out.println("Hello I'm a person!");
 	}
 
+	public void onCreate() {
+		System.out.println("Person Created " + this);
+	}
 
-
+	public void onDestroy() {
+		System.out.println("Person destroyed");
+	}
 	public void setTaxId(int taxId) {
 		this.taxId = taxId;
 	}
